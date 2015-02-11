@@ -129,7 +129,7 @@ multiple fields from an object.
 
     type alias Task = { task : String, id : Int, completed : Bool }
 
-    point : Decoder Task
+    point = Decoder { completed : Bool, id : Int, task : String }
     point =
         object3 Task
           ("task" := string)
